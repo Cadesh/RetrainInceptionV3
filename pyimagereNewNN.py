@@ -105,7 +105,7 @@ def getBestValuesIndex(y):
 # ----------------------------------------------------------------------------------------
 if __name__== "__main__":
     #picPath = '/home/swarr/win2020/PRJ666/backend/'
-    picPath = './'
+    picPath = ''
     imageName = sys.argv[1]
 
     # load image

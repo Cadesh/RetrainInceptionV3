@@ -21,7 +21,7 @@ x=GlobalAveragePooling2D()(x)
 x=Dense(1024,activation='relu')(x) #we add dense layers so that the model can learn more complex functions and classify for better results.
 x=Dense(1024,activation='relu')(x) #dense layer 2
 x=Dense(512,activation='relu')(x) #dense layer 3
-preds=Dense(10,activation='softmax')(x) #final layer with softmax activation CHANGE HERE TO ADD MORE LABELS
+preds=Dense(9,activation='softmax')(x) #final layer with softmax activation CHANGE HERE TO ADD MORE LABELS
 
 
 model=Model(inputs=base_model.input,outputs=preds)
@@ -46,7 +46,7 @@ train_generator=train_datagen.flow_from_directory('./train/', # this is where yo
 
 
 # test with other optimizers: Gradient Descent, Adam, Adagrad, Adadelta
-model.compile(optimizer='Adadelta',loss='categorical_crossentropy',metrics=['accuracy'])
+model.compile(optimizer='Adam',loss='categorical_crossentropy',metrics=['accuracy'])
 # Adam optimizer
 # loss function will be categorical cross entropy
 # evaluation metric will be accuracy

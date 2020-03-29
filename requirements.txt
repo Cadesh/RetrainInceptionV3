@@ -1,0 +1,11 @@
+numpy==1.18.1
+Pillow==7.0.0
+tensorflow-gpu==1.14.0
+Keras==2.3.1
+opencv-python==4.1.2.30
+ffmpeg-python==0.2.0
+python-vlc==3.0.7110
+pandas==1.0.1
+matplotlib==3.2.0
+
+# run with pip install -r requirements.txt

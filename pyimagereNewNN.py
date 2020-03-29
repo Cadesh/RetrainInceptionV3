@@ -72,7 +72,7 @@ tf.compat.v1.keras.backend.set_session(get_session())
 # Download the file from:
 # https://github.com/fchollet/deep-learning-models/releases/download/v0.5/inception_v3_weights_tf_dim_ordering_tf_kernels.h5
 #model_path = os.path.join('inception_v3_weights_tf_dim_ordering_tf_kernels.h5')
-model_path = os.path.join('modelTest1.h5')
+model_path = os.path.join('model9Adam99.h5')
 
 #model = InceptionV3(weights='imagenet')
 model = tf.compat.v1.keras.models.load_model(model_path, custom_objects=None, compile=True)
@@ -125,6 +125,7 @@ if __name__== "__main__":
     for outPerc in y[0]:
         p = outPerc.item() # convert numpy float to python
         out = outputUnit(labels_to_names[count], round(p * 100,2))
+        print (count)
         outputList.append(out)
         count+=1
 
